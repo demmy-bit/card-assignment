@@ -1,4 +1,4 @@
-// JavaScript for form functionality using your class names and structure
+
 
 const cardName = document.getElementById("card-name");
 const cardNumber = document.getElementById("card-number");
@@ -17,7 +17,7 @@ const continueBtn = document.getElementById("continue-btn");
 const formSection = document.getElementById("form-section");
 const successScreen = document.getElementById("success-screen");
 
-// Error elements
+
 const errorName = document.getElementById("error-name");
 const errorNumber = document.getElementById("error-number");
 const errorMM = document.getElementById("error-mm");
@@ -51,18 +51,18 @@ inputCvc.addEventListener("input", () => {
 confirmBtn.addEventListener("click", () => {
   let hasError = false;
 
-  // Reset error messages and borders
+ 
   document.querySelectorAll(".error-message").forEach(e => e.textContent = "");
   document.querySelectorAll("input").forEach(input => input.classList.remove("input-error"));
 
-  // Validate Name
+  
   if (inputName.value.trim() === "") {
     errorName.textContent = "Can't be blank";
     inputName.classList.add("input-error");
     hasError = true;
   }
 
-  // Validate Card Number
+ 
   const cardNum = inputNumber.value.replace(/\s/g, "");
   if (!/^\d{16}$/.test(cardNum)) {
     errorNumber.textContent = cardNum === "" ? "Can't be blank" : "Wrong format, numbers only";
@@ -70,21 +70,21 @@ confirmBtn.addEventListener("click", () => {
     hasError = true;
   }
 
-  // Validate Expiry MM
+ 
   if (!/^\d{2}$/.test(inputMM.value)) {
     errorMM.textContent = "Can't be blank";
     inputMM.classList.add("input-error");
     hasError = true;
   }
 
-  // Validate Expiry YY
+
   if (!/^\d{2}$/.test(inputYY.value)) {
     errorYY.textContent = "Can't be blank";
     inputYY.classList.add("input-error");
     hasError = true;
   }
 
-  // Validate CVC
+
   if (!/^\d{3}$/.test(inputCvc.value)) {
     errorCvc.textContent = "Can't be blank";
     inputCvc.classList.add("input-error");

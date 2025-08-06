@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+  <title> Interactive card details</title>
+
+</head>
+
+
+
+
+<body class="container">
+
+  <img src="./images/bg-main-desktop.png" class="background" />
+  <img src="./images/bg-card-front.png" alt="front cc" class="front">
+  <img src="./images/bg-card-back.png" alt="back cc" class="back">
+  <img src="./images/card-logo.svg" alt="cc logo" class="logo">
+  <div class="card-number" id="card-number">0000 0000 0000 0000</div>
+  <div class="cardholder-name" id="card-name">JANE APPLESEED</div>
+  <div class="exp-date" id="card-exp">00/00</div>
+  <div class="cv-number" id="card-cvc">000</div>
+  <div class="section" id="form-section">
+    <label>CARDHOLDER NAME</label>
+    <input class="subsection" type="text" id="input-name" placeholder="Jane Appleseed" />
+    <span class="error-message" id="error-name"></span>
+
+    <label1>CARD NUMBER</label1>
+    <input class="subsection" type="text" id="input-number" placeholder="1234 5678 9123 0000" maxlength="19" />
+    <span class="error-message" id="error-number"></span>
+
+    <label class="date">EXP. DATE (MM/YY)</label>
+    <input class="cvv" id="input-mm" type="text" placeholder="MM" maxlength="2" />
+    <span class="error-message" id="error-mm"></span>
+
+    <input class="cvv" id="input-yy" type="text" placeholder="YY" maxlength="2" />
+    <span class="error-message" id="error-yy"></span>
+
+    <label class="date">CVV</label>
+    <input class="cv" id="input-cvc" type="text" placeholder="e.g 123" maxlength="3" />
+    <span class="error-message" id="error-cvc"></span>
+
+    <button class="confirm-btn" id="confirm-btn">
+      Confirm
+    </button>
+  </div>
+
+
+  <div class="hidden" id="success-screen">
+    <img src="./images/icon-complete.svg" alt="Success" />
+    <h2>Thank You!</h2>
+    <p>Your card details have been added</p>
+    <button class="confirm-btn" id="continue-btn">Continue</button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
